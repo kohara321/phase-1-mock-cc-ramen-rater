@@ -13,11 +13,17 @@ function pasteInfo(data) {
     const menu = document.querySelector('#ramen-menu')
     data.forEach(data => {
         const showName = document.querySelector('.name')
+        const showRestaurant = document.querySelector('.restaurant')
+        const showRating = document.querySelector('#rating-display')
+        const showComment = document.querySelector('#comment-display')
         const img = document.createElement('img')
         img.src = data.image
         img.alt = data.name
         //Ended here, trying to get individual names to display
         showName.textContent = data.name
+        showRestaurant.textContent = data.restaurant
+        showRating.textContent = data.rating
+        showComment.textContent = data.comment
         menu.append(img)
     });
 }
